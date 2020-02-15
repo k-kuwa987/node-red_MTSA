@@ -11,8 +11,14 @@ node-redはブラウザでhttp://localhost:1880/ にアクセスすることで�
 
 
 
-## mtsaのビルド
-mtsaをビルドする場合は以下のコマンドを実行する。
+## MTSAのビルド
+MTSAをビルドする場合はまず初めに`mtsa-data`内で以下のコマンドを用いてMTSAをクローンする。
+
+```
+git clone https://bitbucket.org/lnahabedian/mtsa.git
+```
+
+次に以下のコマンドでmavenを実行することでビルドが開始される。
 
 ```
 docker-compose exec mtsa cd mtsa/maven-root/mtsa && mvn install -Dmaven.test.skip=true
