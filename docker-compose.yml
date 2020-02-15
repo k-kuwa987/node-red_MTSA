@@ -3,7 +3,7 @@ version: '3.7'
 
 services:
   mtsa:
-    image: lwieske/java-8:jdk-8u20
+    build: ./containers/mtsa
     container_name: mtsa
     environment:
       - TZ=Asia/Tokyo
