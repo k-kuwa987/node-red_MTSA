@@ -21,7 +21,7 @@ git clone https://bitbucket.org/lnahabedian/mtsa.git
 次に以下のコマンドでmavenを実行することでビルドが開始される。
 
 ```
-docker-compose exec mtsa cd mtsa/maven-root/mtsa && mvn install -Dmaven.test.skip=true
+docker-compose exec mtsa /bin/bash -c "cd mtsa/maven-root/mtsa && mvn install -Dmaven.test.skip=true"
 ```
 
 ビルドが完了するとmtsa-data/mtsa/maven-root/mtsa/target内にjarファイルが生成される。
