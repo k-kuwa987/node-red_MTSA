@@ -1,5 +1,4 @@
-
-version: '3.7'
+version: "3.7"
 
 services:
   mtsa:
@@ -16,7 +15,6 @@ services:
       - node-red-net
     tty: true
 
-
   node-red:
     image: nodered/node-red:latest
     container_name: node-red
@@ -27,10 +25,7 @@ services:
     networks:
       - node-red-net
     volumes:
-      - node-red-data
-
-volumes:
-  node-red-data:
+      - ./node-red-data:/data
 
 networks:
   node-red-net:
